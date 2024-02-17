@@ -1,7 +1,8 @@
-import { Card, Layout, Statistic, List, Typography } from 'antd';
+import { Card, Layout, Statistic, List, Typography, Spin } from 'antd';
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import { FetchAssets, fakeFetchCrypto } from '../../api';
+import { percentDiffrence } from "../../utils";
 
 const siderStyle = {
   padding: '1rem',
@@ -26,24 +27,39 @@ export default function AppSider() {
       const { result } = await fakeFetchCrypto()
       const assets = await FetchAssets()
 
-      setAssets(assets)
+      setAssets(assets.map(asset => {
+        const coin = result.find((c) => c.id == asset.id)
+        return {
+          grow: asset.price < coin.price,
+          growPercent: percentDiffrence(asset.price, coin.price),
+          totalAmount: asset.amount * coin.price,
+          totalProfit: asset.amount * coin.price - asset.amount * asset.price,
+          ... asset
+        }
+      }))
       setCrypto(result)
       setLoading(false)
     }
     preload()
   }, [])
 
+  if (loading) {
+    return <Spin fullscreen />
+  }
+
 
   return (
     <Layout.Sider width="25%" style={siderStyle}>
-      <Card style={{marginBottom: '1rem'}}>
+      {assets.map((asset) => (
+          
+      <Card key={asset.id} style={{marginBottom: '1rem'}}>
         <Statistic 
-          title="Active"
-          value={11.28}
+          title={asset.id}
+          value={asset.totalAmount}
           precision={2}
-          valueStyle={{color: '#3f8600'}}
-          prefix={<ArrowUpOutlined />}
-          suffix='%'
+          valueStyle={{color: asset.grow ? '#3f8600' : '#cf1322'}}
+          prefix={asset.grow ? <ArrowUpOutlined /> : <ArrowDownOutlined />}
+          suffix='$'
         />
         <List
           size='small'
@@ -55,7 +71,8 @@ export default function AppSider() {
       )}
     />
       </Card>
-      <Card>
+      ))}
+      {/* <Card>
         <Statistic 
           title="Idle"
           value={9.3}
@@ -64,7 +81,7 @@ export default function AppSider() {
           prefix={<ArrowDownOutlined />}
           suffix='%'
         />
-      </Card>
+      </Card> */}
     </Layout.Sider>
   )
 }

@@ -1,13 +1,13 @@
 export const cryptoAssets = [
   {
     id: 'bitcoin',
-    amout: 0.02,
+    amount: 0.02,
     price: 26421,
     date: new Date()
   },
   {
     id: 'ethereum',
-    amout: 5,
+    amount: 5,
     price: 2400,
     date: new Date()
   }
@@ -15,64 +15,64 @@ export const cryptoAssets = [
 
 
 export const cryptoData = {
-    "result": [
+    result: [
       {
-        "id": "bitcoin",
-        "icon": "https://static.coinstats.app/coins/valentine/bitcoin.png",
-        "name": "Bitcoin",
-        "symbol": "BTC",
-        "rank": 1,
-        "price": 51450.855624479766,
-        "priceBtc": 1,
-        "volume": 62959932238.527405,
-        "marketCap": 1009871271545.4695,
-        "availableSupply": 19627881,
-        "totalSupply": 21000000,
-        "priceChange1h": -0.28,
-        "priceChange1d": 4.57,
-        "priceChange1w": 18.27,
-        "redditUrl": "https://www.reddit.com/r/Bitcoin/",
-        "websiteUrl": "https://bitcoin.org",
-        "twitterUrl": "https://twitter.com/bitcoin",
-        "explorers": [
-          "https://mempool.space/",
-          "https://blockchair.com/bitcoin/",
-          "https://btc.com/",
-          "https://btc.tokenview.io/",
-          "https://www.oklink.com/btc",
-          "https://3xpl.com/bitcoin",
-          "https://blockchain.coinmarketcap.com/chain/bitcoin",
-          "https://blockexplorer.one/btc/mainnet"
+        id: "bitcoin",
+        icon: "https://static.coinstats.app/coins/valentine/bitcoin.png",
+        name: "Bitcoin",
+        symbol: "BTC",
+        rank: 1,
+        price: 51450.855624479766,
+        priceBtc: 1,
+        volume: 62959932238.527405,
+        marketCap: 1009871271545.4695,
+        availableSupply: 19627881,
+        totalSupply: 21000000,
+        priceChange1h: -0.28,
+        priceChange1d: 4.57,
+        priceChange1w: 18.27,
+        redditUrl: "https://www.reddit.com/r/Bitcoin/",
+        websiteUrl: "https://bitcoin.org",
+        twitterUrl: "https://twitter.com/bitcoin",
+        explorers: [
+        "https://mempool.space/",
+        "https://blockchair.com/bitcoin/",
+        "https://btc.com/",
+        "https://btc.tokenview.io/",
+        "https://www.oklink.com/btc",
+        "https://3xpl.com/bitcoin",
+        "https://blockchain.coinmarketcap.com/chain/bitcoin",
+        "https://blockexplorer.one/btc/mainnet"
         ]
       },
       {
-        "id": "ethereum",
-        "icon": "https://static.coinstats.app/coins/valentine/ethereum.png",
-        "name": "Ethereum",
-        "symbol": "ETH",
-        "rank": 2,
-        "price": 2745.2280521963494,
-        "priceBtc": 0.053308171152750924,
-        "volume": 26774171784.26262,
-        "marketCap": 329886659388.0627,
-        "availableSupply": 120167306,
-        "totalSupply": 120167306,
-        "priceChange1h": 0.11,
-        "priceChange1d": 4.33,
-        "priceChange1w": 13.88,
-        "redditUrl": "https://www.reddit.com/r/ethereum",
-        "websiteUrl": "https://www.ethereum.org/",
-        "twitterUrl": "https://twitter.com/ethereum",
-        "contractAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-        "decimals": 18,
-        "explorers": [
-          "https://etherscan.io/",
-          "https://ethplorer.io/",
-          "https://blockchair.com/ethereum",
-          "https://eth.tokenview.io/",
-          "https://www.oklink.com/eth",
-          "https://3xpl.com/ethereum",
-          "https://blockchain.coinmarketcap.com/chain/ethereum"
+        id: "ethereum",
+        icon: "https://static.coinstats.app/coins/valentine/ethereum.png",
+        name: "Ethereum",
+        symbol: "ETH",
+        rank: 2,
+        price: 2745.2280521963494,
+        priceBtc: 0.053308171152750924,
+        volume: 26774171784.26262,
+        marketCap: 329886659388.0627,
+        availableSupply: 120167306,
+        totalSupply: 120167306,
+        priceChange1h: 0.11,
+        priceChange1d: 4.33,
+        priceChange1w: 13.88,
+        redditUrl: "https://www.reddit.com/r/ethereum",
+        websiteUrl: "https://www.ethereum.org/",
+        twitterUrl: "https://twitter.com/ethereum",
+        contractAddress: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        decimals: 18,
+        explorers: [
+        "https://etherscan.io/",
+        "https://ethplorer.io/",
+        "https://blockchair.com/ethereum",
+        "https://eth.tokenview.io/",
+        "https://www.oklink.com/eth",
+        "https://3xpl.com/ethereum",
+        "https://blockchain.coinmarketcap.com/chain/ethereum"
         ]
       },
       {
@@ -598,13 +598,13 @@ export const cryptoData = {
         ]
       }
     ],
-    "meta": {
-      "page": 1,
-      "limit": 20,
-      "itemCount": 15746,
-      "pageCount": 788,
-      "hasPreviousPage": false,
-      "hasNextPage": true
+    meta: {
+      page: 1,
+      limit: 20,
+      itemCount: 15746,
+      pageCount: 788,
+      hasPreviousPage: false,
+      hasNextPage: true
     }
 }
 
