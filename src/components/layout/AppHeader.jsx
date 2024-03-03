@@ -47,9 +47,7 @@ export default function AppHeader() {
         style={{
           width: 250,
         }}
-        placeholder="select one country"
-        defaultValue={['china']}
-        onChange={handleChange}
+        value="press/to open"
         optionLabelProp="label"
         options={options}
         optionRender={(option) => (
