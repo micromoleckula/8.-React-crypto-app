@@ -1,4 +1,5 @@
 import { Layout, Select, Space, Button } from 'antd';
+import { useCrypto } from '../../context/crypto-context';
 
 const headerStyle = {
   width: '100%',
@@ -41,6 +42,7 @@ const options = [
 ];
 
 export default function AppHeader() {
+  const { crypto } = useCrypto() 
   return (
     <Layout.Header style={headerStyle}>
       <Select
@@ -49,13 +51,15 @@ export default function AppHeader() {
         }}
         value="press/to open"
         optionLabelProp="label"
-        options={options}
+        options={crypto.map(coin => ({
+          label: coin.name,
+          value: coin.id,
+          icon: coin.icon,
+        }))}
         optionRender={(option) => (
           <Space>
-            <span role="img" aria-label={option.data.label}>
-              {option.data.emoji}
-            </span>
-            {option.data.desc}
+            <img style={{width: 20}} src={option.data.icon} alt={option.data.label} />{' '}
+            {option.data.label}
           </Space>
         )}
       />
