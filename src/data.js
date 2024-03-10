@@ -24,9 +24,9 @@ export const cryptoData = {
     result: [
       {
         id: "bitcoin",
-        icon: "https://static.coinstats.app/coins/valentine/bitcoin.png",
-        name: "Bitcoin",
-        symbol: "BTC",
+        'icon': "https://static.coinstats.app/coins/valentine/bitcoin.png",
+        'name': "Bitcoin",
+        'symbol': "BTC",
         rank: 1,
         price: 51450.855624479766,
         priceBtc: 1,

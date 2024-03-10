@@ -63,7 +63,7 @@ export default function AppHeader() {
       />
       <Button type="primary" onClick={() => setDrawer(true)}>Add asset</Button>
 
-      <Modal title="Basic Modal" open={modal} onCancel={() => setModal(false)} footer={null}>
+      <Modal title="Coin info" open={modal} onCancel={() => setModal(false)} footer={null}>
         <CoinInfoModal coin={coin} />
       </Modal>
 
