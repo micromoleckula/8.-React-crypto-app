@@ -1,4 +1,4 @@
-import {Flex, Select, Space, Typography} from 'antd'
+import {Flex, Select, Space, Typography, Divider, Form, Input, InputNumber, Button} from 'antd'
 import { useState } from "react";
 import { useCrypto } from '../context/crypto-context';
 
@@ -28,7 +28,28 @@ export default function AddAssetForm() {
       />  
     )
   }
-  return <form>
+
+  function onFinish(values) {
+    console.log('finish', values)
+  }
+
+  return (
+    <Form
+      name="basic"
+      labelCol={{
+        span: 4,
+      }}
+      wrapperCol={{
+        span: 10,
+      }}
+      style={{
+        maxWidth: 600,
+      }}
+      initialValues={{
+        remember: true,
+      }}
+      onFinish={onFinish}
+    >
     <Flex align='center'>
       <img 
         src={coin.icon} 
@@ -39,5 +60,34 @@ export default function AddAssetForm() {
         {coin.name}
       </Typography.Title>
     </Flex>
-  </form>
+    <Divider />
+    
+    <Form.Item
+      label="Amount"
+      name="amount"
+      rules={[
+        {
+          required: true,
+          type: 'number',
+          min: 0,
+          message: 'Please input your number!',
+        },
+      ]}
+    >
+      <InputNumber />
+    </Form.Item>
+
+    <Form.Item
+      label="Price"
+      name="price" >
+      <InputNumber />
+    </Form.Item>
+
+    <Form.Item>
+      <Button type="primary" htmlType="submit">
+        Add asset
+      </Button>
+    </Form.Item>
+  </Form>
+  )
 }
