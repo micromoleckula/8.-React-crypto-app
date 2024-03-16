@@ -74,13 +74,23 @@ export default function AddAssetForm() {
         },
       ]}
     >
-      <InputNumber />
+      <InputNumber style={{width: '100%'}}/>
     </Form.Item>
-
     <Form.Item
       label="Price"
       name="price" >
-      <InputNumber />
+      <InputNumber disabled style={{width: '100%'}}/>
+    </Form.Item>
+
+    <Form.Item
+      label="Date & Time"
+      name="date" >
+      <InputNumber disabled style={{width: '100%'}}/>
+    </Form.Item>
+    <Form.Item
+      label="Total"
+      name="total" >
+      <InputNumber disabled style={{width: '100%'}}/>
     </Form.Item>
 
     <Form.Item>
