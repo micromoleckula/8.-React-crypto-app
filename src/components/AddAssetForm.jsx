@@ -70,7 +70,7 @@ export default function AddAssetForm() {
           required: true,
           type: 'number',
           min: 0,
-          message: 'Please input your number!',
+          message: 'Enter!',
         },
       ]}
     >
