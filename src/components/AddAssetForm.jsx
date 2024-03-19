@@ -1,4 +1,4 @@
-import {Flex, Select, Space, Typography, Divider, Form, InputNumber, Button} from 'antd'
+import {Flex, Select, Space, Typography, Divider, Form, InputNumber, Button, DatePicker} from 'antd'
 import { useState } from "react";
 import { useCrypto } from '../context/crypto-context';
 
@@ -85,7 +85,7 @@ export default function AddAssetForm() {
     <Form.Item
       label="Date & Time"
       name="date" >
-      <InputNumber disabled style={{width: '100%'}}/>
+      <DatePicker showTime />
     </Form.Item>
     <Form.Item
       label="Total price"
