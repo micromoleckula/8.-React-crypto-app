@@ -7,6 +7,7 @@ export default function AddAssetForm() {
   const [coin, setCoin] = useState(null)
 
   if (!coin) {
+
     return (
       <Select
         style={{
@@ -27,6 +28,7 @@ export default function AddAssetForm() {
         )}
       />  
     )
+
   }
 
   function onFinish(values) {
@@ -100,4 +102,4 @@ export default function AddAssetForm() {
     </Form.Item>
   </Form>
   )
-}
+} //fix
